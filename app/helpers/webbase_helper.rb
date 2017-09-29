@@ -1,0 +1,2 @@
+module WebbaseHelper
+end
