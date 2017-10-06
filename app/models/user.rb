@@ -1,9 +1,5 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-  attr_accessor :birthday
-  attr_accessor :address
-  attr_accessor :sex
-  attr_accessor :phone_number
 
   before_save {self.email = email.downcase}
   validates :name, presence: true, length: {maximum: 50}

@@ -22,6 +22,10 @@ module SessionsHelper
     end
   end
 
+  def get_user
+    return current_user
+  end
+
   def forget(user)
     user.forget
     cookies.delete(:user_id)
@@ -30,6 +34,10 @@ module SessionsHelper
 
   def logged_in?
     !current_user.nil?
+  end
+
+  def posts_new
+
   end
 
   def log_out

@@ -9,13 +9,13 @@
         <%= f.text_field :name, class: 'form-control' %>
 
         <%= f.label :birthday %>
-        <%= f.text_field :birthday, class: 'form-control' %>
+        <%= f.text_field :birthday, class: 'form-control', placeholder: "dd/mm/yyyy" %>
 
         <div class="form_row">
           <label for="sex">Gender:</label>
           <p>
-            <%= f.label :gender_male, 'Male' %><%= f.radio_button :sex, "Male" %>
-            <%= f.label :gender_female, 'Female' %> <%= f.radio_button :sex, "Female" %>
+            <%= f.label :gender_male, 'Male' %>   <%= f.radio_button :sex, "Male", class: "user-sex" %>
+            <%= f.label :gender_female, 'Female' %>   <%= f.radio_button :sex, "Female", class: "user-sex" %>
           </p>
         </div>
 
