@@ -8,11 +8,11 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   has_secure_password
-  validates :password, presence: true, length: {minimum: 6}
-  validates :birthday, presence: true, length: {maximum: 50}
-  validates :address, presence: true, length: {maximum: 100}
-  validates :sex, presence: true
-  validates :phone_number, presence: true, length: {maximum: 20}
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  # validates :birthday, presence: true, length: {maximum: 50}
+  # validates :address, presence: true, length: {maximum: 100}
+  # validates :sex, presence: true
+  # validates :phone_number, presence: true, length: {maximum: 20}
 
   # Returns the hash digest of the given string.
   def self.digest(string)

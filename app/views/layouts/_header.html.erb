@@ -1,6 +1,9 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="w3-container w3-center w3-padding-32">
   <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
+    <ul class="nav navbar navbar-left" >
+      <%= link_to "My Blog", root_path, id: "logo" %>
+    </ul>
+
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -22,7 +25,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", '#' %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li><%= link_to "Create Post", new_post_path %></li>
                 <li class="divider"></li>
                 <li>
